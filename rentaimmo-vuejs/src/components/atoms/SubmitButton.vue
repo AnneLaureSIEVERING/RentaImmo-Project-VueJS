@@ -35,58 +35,20 @@
 
     .button {
         text-align: center;
-        color: rgb(34, 34, 34);
         box-sizing: border-box;
         border-right: none;
+        padding: 16px;
     }
 
-    /** MEDIA QUERIES **/
-
-    @media screen and (min-width: 321px) and (max-width: 767px) {
-        #button {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 12px;
-            margin: 0 auto;
-        }
-        .button {
-            padding: 10px;
-        }
+     button {
+        font-size: 16px;
+        line-height: 12px;
+        padding: 13px;
+        margin: auto;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-        button {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 15px;
-            margin: auto;
-        }
-        .button {
-            padding: 16px;
-        }
+    .style_zone {
+        margin-top: 18px;
     }
 
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
-        button {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 15px;
-            margin: auto;
-        }
-        .button {
-            padding: 16px;
-        }
-    }
-
-    @media screen and (min-width: 1200px)  {
-        button {
-            font-size: 16px;
-            line-height: 16px;
-            padding: 15px;
-            margin: auto;
-        }
-        .button {
-            padding: 16px;
-        }
-    }
 </style>

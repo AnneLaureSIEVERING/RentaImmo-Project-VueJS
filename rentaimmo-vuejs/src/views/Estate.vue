@@ -96,4 +96,9 @@ export default {
         height: 50vh;
     }
 
+    .container {
+        height: 100vh;
+        width: 100vw;
+    }
+
 </style>

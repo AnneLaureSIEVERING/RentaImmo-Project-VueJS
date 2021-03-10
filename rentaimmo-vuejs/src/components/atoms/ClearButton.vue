@@ -13,13 +13,10 @@
 </script>
 
 <style scoped>
-    .clear-form{
-        display: block;
-    }
     
     .leftright{
         height: 4px;
-        width: 35px;
+        width: 30px;
         position: absolute;
         margin-top: 20px;
         background-color: #6E52FC; 
@@ -30,7 +27,7 @@
     
     .rightleft{
         height: 4px;
-        width: 35px;
+        width: 30px;
         position: absolute;
         margin-top: 20px;
         background-color: #52A0F8;
@@ -47,9 +44,9 @@
         letter-spacing: 1px;
         transition: all .3s ease-in;
         opacity: 0;
-        margin: 40px 0 0 -2px;
+        margin: 40px 0 0 -6px;
         border: none;
-        padding: 3px;
+        padding: 2px;
         cursor: pointer;
     }
     
@@ -70,25 +67,5 @@
     }
     .clear-form:hover .close{
         opacity: 1;
-    }
-    
-    /** MEDIA QUERIES **/
-
-    @media screen and (min-width: 321px) and (max-width: 767px) {
-        .clear-form{
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 10px;
-            display: block;
-        }
-    }
-
-    @media screen and (min-width: 1200px)  {
-        .clear-form {
-            margin-left: 10px;
-            margin-right: 10px;
-            width: 50px;
-            height: 50px;
-        }
     }
 </style>

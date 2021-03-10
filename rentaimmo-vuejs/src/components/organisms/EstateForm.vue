@@ -79,47 +79,63 @@
 <style scoped>
 
     .text-danger {
-        border: 2px solid #D30A64;
+        border: 2px solid rgb(223, 93, 93);
         border-radius: 32px;
+        padding: 5px;
     }
 
     form {
         margin-top: 2em;
     }
 
-    .form_immo {
-        font-family: inherit;
-    }
-
     .search_zone {
-        border: 1px solid rgb(221, 221, 221);
+        border: 1px solid #172B51;
         border-radius: 32px;
-        color: rgb(34, 34, 34);
         align-items: center;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px;
-        background-color: rgb(247, 247, 247);
+        background-color: #172B51;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column; 
+        height: 45vh;
     }
 
     .zone_input {
-        color: rgb(34, 34, 34);
+        border-bottom: 1px solid #DDDDDD;
+        text-align: center;
+        padding: 20px 15px;
+        line-height: 1.43;
+        width: 95%;
     }
 
     label {
-        color: rgb(34, 34, 34);
+        color: #FFFFFF;
         cursor: pointer;
         display: block;
         border: 1px solid transparent;
-        font-weight: 800;
+        font-weight: 600;
+        letter-spacing: 0.02em;
         text-align: center;
+        width: 95%;
+        font-size: 16px;
     }
 
     input {
         background: none;
         font-weight: 600;
-        color: #413334;
+        color: #FFFFFF;
         outline-style: none;
         text-align: center;
+        width: 95%;
+        font-size: 16px;
+    }
+    select {
+        background: none;
+        font-weight: 600;
+        color: #FFFFFF;
+        outline-style: none;
+        text-align: center;
+        width: 95%;
     }
 
     @media screen and (min-width: 321px) and (max-width: 767px) {
@@ -128,31 +144,16 @@
             height: 82vh;
             width: 60vw;
         }
-        .search_zone {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column; 
-        }
-        .zone_input {
-            font-size: 14px;
-            line-height: 1.43;
-            margin: 10px 20px;
-            width: 80%;
-            border-bottom: 1px solid #DDDDDD;
-            padding-bottom: 5px;
+         .search_zone {
+            width: 90%;  
         }
         label {
-            font-size: 12px;
             padding-bottom: 5px;
-            letter-spacing: 0.04em;
-            width: 90%;
         }
         input {
             border: 0px;
             margin: 0px;
             padding-left: 10px;
-            width: 85%;
-            font-size: 12px;
         }
     }
 
@@ -161,31 +162,15 @@
             margin-top: 50px;
         }
         .search_zone {
-            width: 40%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;        
-        }
-        .zone_input {
-            font-size: 14px;
-            line-height: 1.43;
-            margin: 20px 15px;
-            width: 95%;
-            border-bottom: 1px solid #DDDDDD;
-            padding-bottom: 5px;  
+            width: 60%;  
         }
         label {
-            font-size: 12px;
             padding-bottom: 5px;
-            letter-spacing: 0.04em;
-            width: 90%;
         }
         input {
             border: 0px;
             margin: 0px;
             padding-left: 10px;
-            width: 85%;
-            font-size: 12px;
         }
     }
 
@@ -194,30 +179,15 @@
             margin-top: 50px;
         }
         .search_zone {
-            height: 70px;
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-        }
-        .zone_input {
-            font-size: 14px;
-            line-height: 1.43;
-            margin: 20px 15px;
-            width: 95%;
-            border-right: 1px solid #DDDDDD;
+            width: 60%;
         }
         label {
-            font-size: 12px;
             padding-bottom: 3px;
-            letter-spacing: 0.04em;
-            width: 95%;
         }
         input {
             border: 0px;
             margin: 0px;
             padding-left: 10px;
-            width: 85%;
-            font-size: 12px;
         }
     }
 
@@ -226,43 +196,14 @@
             margin-top: 50px;
         }
         .search_zone {
-            height: 75px;
-            width: 75%;
-            margin: 0 auto;
-            display: flex;
-        }
-        .zone_input {
-            font-size: 12px;
-            line-height: 1.43;
-            margin: 20px 15px;
-            width: 95%;
-            border-right: 1px solid #DDDDDD;
+            width: 30%;
         }
         label {
-            font-size: 12px;
             padding-bottom: 3px;
-            letter-spacing: 0.04em;
-            width: 95%;
         }
         input {
             border: 0px;
             margin: 0px;
-            padding-left: 10px;
-            width: 90%;
-            font-size: 12px;
-        }
-
-    }
-
-    @media screen and (min-width: 1600px)  {
-        .zone_input {
-            font-size: 14px;
-        }
-        label {
-            font-size: 14px;
-        }
-        input {
-            font-size: 14px;
         }
     }
 </style>

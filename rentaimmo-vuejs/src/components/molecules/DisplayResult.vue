@@ -30,10 +30,10 @@ export default {
     }
 
     .profitability {
-    display: block;
-    color: #413334;
-    text-align: center;
-    border-bottom: 1px solid #8B8B8B;
+        display: block;
+        color: #413334;
+        text-align: center;
+        border-bottom: 1px solid #8B8B8B;
     }  
 
     /** MEDIA QUERIES **/
