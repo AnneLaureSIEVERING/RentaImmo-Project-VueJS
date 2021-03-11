@@ -21,74 +21,37 @@ export default {
 
 <style scoped>
     .display_results {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100vw;
-        background: white;
-        transition: all 1s;
+        width: 100%;
+        background: #a5a3a3;
+        height: 25%;
+        display: flex;
+        justify-content: center;
     }
 
     .profitability {
-        display: block;
-        color: #413334;
+        color: #172b51;
         text-align: center;
-        border-bottom: 1px solid #8B8B8B;
-    }  
+        border-bottom: 1px solid #637591;
+        flex-direction: column;
+    } 
 
     /** MEDIA QUERIES **/
-    @media screen and (min-width: 321px) and (max-width: 767px) {
-
-        .display_results.transition-on {
-            top: 80%;
-            height: 20vh;
-        }
+    @media screen and (min-width: 321px) and (max-width: 991px) {
 
         .profitability {
-        font-size: 14px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin: 20px auto;
-        width: 90vw;
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
     }
 
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-    
-        .display_results.transition-on {
-            top: 80%;
-            height: 20vh;
-        }
-        .profitability {
-        font-size: 14px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin: 20px auto;
-        width: 90vw;
-        }
-    }
-
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @media screen and (min-width: 992px) {
         
         .profitability {
-            font-size: 25px;
+            font-size: 20px;
             padding-top: 28px;
-            padding-bottom: 20px;
-            margin: 50px auto;
-            width: 35vw;
+            padding-bottom: 15px;
         }
-    }
-
-    @media screen and (min-width: 1200px)  {
-    
-        .profitability {
-            font-size: 25px;
-            padding-top: 28px;
-            padding-bottom: 20px;
-            margin: 50px auto;
-            width: 30vw;
-        }
-    
     }
 
 </style>

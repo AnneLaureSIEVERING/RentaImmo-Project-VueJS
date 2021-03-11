@@ -11,12 +11,10 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
     h1 {
-        color: #172B51;
+        color: white;
         text-transform: uppercase;
         text-align: center;
         font-family: 'Fascinate', cursive;
-        margin-top: 5px;
-        padding-top: 10px;
         font-size: 46px;
         text-shadow: #101011 1px 1px 1px;
     }

@@ -2,13 +2,18 @@
     <div class="clear-form">
         <div class="leftright"></div>
         <div class="rightleft"></div>
-        <button type="reset" class="close" id="close-label">Clear</button>
+        <button type="reset" @click="onClick()" class="close" id="close-label">Clear</button>
     </div>
 </template>
 
 <script>
     export default {
         name: "ClearButton",
+        methods: {
+            onClick() {
+                this.$emit('submitToCloseDisplay');
+            }
+        }
     }
 </script>
 

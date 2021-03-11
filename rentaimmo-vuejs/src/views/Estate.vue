@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div class="styleContainerPrincipal">
         <section class="container">
-            <TitleHeader/>
             <EstateForm
                 @submitForm="methodsCalculs"
+                @closeDisplay="closeDisplay"
             />
             <CatchPhrase/>
         </section>
-        <transition name="show" leave-active-class="show-display">
+        <transition name="show-display">
             <DisplayResult
                 :results="computedResultForResultComponent"
                 v-show="showDisplayResults"
@@ -17,14 +17,12 @@
 </template>
 
 <script>
-import TitleHeader from '../components/atoms/TitleHeader'
 import CatchPhrase from '../components/molecules/CatchPhrase'
 import EstateForm from '../components/organisms/EstateForm'
 import DisplayResult from '../components/molecules/DisplayResult'
 
 export default {
     components: {
-        TitleHeader,
         EstateForm,
         CatchPhrase,
         DisplayResult
@@ -83,22 +81,52 @@ export default {
         },
         displayResults() {
             this.showDisplayResults = true;
+        },
+        closeDisplay() {
+            this.showDisplayResults = false;
         }
     }
 }
 </script>
 
 <style scoped>
-    .show-display {
-        transition: all 1s;
-        display: block;
-        top: 50%;
-        height: 50vh;
+    .show-display-enter-active {
+        transition: all 1s ease;
+        top: 100%;
+        height: 25%;
+    } 
+    
+    .show-display-enter-to {
+        transition: all 1s ease;
+        top: 70%;
+        height: 25%;
     }
 
+    .show-display-leave {
+        transition: all 1s ease;
+        top: 70%;
+        height: 25%;
+    }
+
+    .show-display-leave-to {
+        transition: all 0s ease;
+        top: 100%;
+        height: 25%;
+    } 
+
     .container {
-        height: 100vh;
-        width: 100vw;
+        height: 75%;
+        background-color: #D3D2D3;
+        background-image: url(../assets/image-foret.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+    }
+
+    .styleContainerPrincipal{
+        height: 85%;
+        background-color: #172b51;
     }
 
 </style>

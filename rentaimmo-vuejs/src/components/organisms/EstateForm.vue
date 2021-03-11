@@ -21,7 +21,7 @@
                 </div>
             </div>
             <SubmitButton />
-            <ClearButton/>
+            <ClearButton @submitToCloseDisplay="closeDisplayMethod"/>
         </div>
     </form>
 </template>
@@ -48,9 +48,7 @@
         methods: {
             validateForm(e) {
                 e.preventDefault()
-                // console.log(this.amountLoan);
-                // console.log(this.duration);
-
+            
                 if(this.amountLoan === '') {
                     this.errorList.push(this.errorList.length + 1);
                     this.hasErrorOnInputAmountLoan = true;
@@ -71,12 +69,20 @@
                         amountLoan: this.amountLoan
                     });
                 }
+            },
+            closeDisplayMethod() {
+                this.$emit('closeDisplay');
             }
         }
     }
 </script>
 
 <style scoped>
+
+    #amountImmo::placeholder {
+        color: white;
+        font-size: 12px;
+    }
 
     .text-danger {
         border: 2px solid rgb(223, 93, 93);
@@ -85,14 +91,15 @@
     }
 
     form {
-        margin-top: 2em;
+        padding-top: 2em;
+        padding-bottom: 2em;
     }
 
     .search_zone {
         border: 1px solid #172B51;
         border-radius: 32px;
         align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px;
+        box-shadow: rgba(241, 234, 234, 0.747) 0px 3px 8px;
         background-color: #172B51;
         margin: 0 auto;
         display: flex;
@@ -117,7 +124,8 @@
         letter-spacing: 0.02em;
         text-align: center;
         width: 95%;
-        font-size: 16px;
+        font-size: 18px;
+        padding-bottom: 15px;
     }
 
     input {
@@ -147,9 +155,6 @@
          .search_zone {
             width: 90%;  
         }
-        label {
-            padding-bottom: 5px;
-        }
         input {
             border: 0px;
             margin: 0px;
@@ -163,9 +168,6 @@
         }
         .search_zone {
             width: 60%;  
-        }
-        label {
-            padding-bottom: 5px;
         }
         input {
             border: 0px;
@@ -181,9 +183,6 @@
         .search_zone {
             width: 60%;
         }
-        label {
-            padding-bottom: 3px;
-        }
         input {
             border: 0px;
             margin: 0px;
@@ -197,9 +196,6 @@
         }
         .search_zone {
             width: 30%;
-        }
-        label {
-            padding-bottom: 3px;
         }
         input {
             border: 0px;
