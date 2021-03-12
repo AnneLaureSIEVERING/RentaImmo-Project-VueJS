@@ -11,7 +11,7 @@
             <div class="style_zone">
                 <div class="zone_input">
                     <label for="notary"> Frais de notaire </label>
-                    <input v-model.number="amountNotary" type="number" id="notary" name="notary_fees" placeholder="Frais de notaire">
+                    <input v-model.number="amountNotary" type="number" id="notary" name="notary_fees"  :placeholder="this.amountNotary===''? 'Frais de notaire' : this.amountNotary" @focus="notaryFeesCalcul"> 
                 </div>
             </div>
             <div class="style_zone">
@@ -28,7 +28,7 @@
             </div>
             <div class="style_zone">
                 <div class="zone_input rent_input">
-                    <label for="rent"> Loyer estimé </label>
+                    <label for="rent"> Loyer estimé (par mois) </label>
                     <input v-model.number="amountRent" type="number" id="rent" name="immo_rent" placeholder="Ajouter le loyer estimé" v-bind:class="{'text-danger': hasErrorOnInputAmountLoan }">
                 </div>
             </div>
@@ -57,10 +57,34 @@ export default {
             amountAgency: '',
             amountRoadworks: '',
             amountRent: '',
-            errorList: []
+            errorList: [],
         }
     },
     methods: {
+        notaryFeesCalcul() {
+            let pxImmo = this.price;
+            let amount;
+            switch(true) {
+                case (pxImmo <= 6500):
+                    amount = (pxImmo * (3.870/100)) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
+                    this.amountNotary = Math.round(amount);
+                    break;
+                case (pxImmo >= 6501 && pxImmo <= 17000):
+                    amount = (pxImmo * (1.596/100) + 147.81) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
+                    this.amountNotary = Math.round(amount);
+                    break;
+                case (pxImmo >= 17001 && pxImmo <= 60000):
+                    amount = (pxImmo * (1.064/100) + 238.25) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
+                    this.amountNotary = Math.round(amount);
+                    break;
+                case(pxImmo > 60000):
+                    amount = (pxImmo * (0.799/100) + 397.25) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
+                    this.amountNotary = Math.round(amount);
+                    break;
+                default:
+                    console.log('erreur dans le switch');
+            }
+        },
         validateForm(e) {
             e.preventDefault()
             

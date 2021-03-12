@@ -32,7 +32,6 @@ export default {
     data: function() {
         return {
             showDisplayResults: false,
-            amountNotaryFees: '',
             amountRentByYear: '',
             amountTotalImmo: '',
             resultsToRentabilityComponent: {
@@ -43,48 +42,29 @@ export default {
     },
     methods: {
         methodsCalculsRentability(valuesToCompute) {
-            this.notaryFees(valuesToCompute.price);
             this.rentByYear(valuesToCompute.amountRent);
-            this.totalPriceImmo(valuesToCompute.price, this.amountNotaryFees, valuesToCompute.amountAgency, valuesToCompute.amountRoadworks);
+            this.totalPriceImmo(valuesToCompute.price, valuesToCompute.amountNotary, valuesToCompute.amountAgency, valuesToCompute.amountRoadworks);
             this.profitability(this.amountTotalImmo, this.amountRentByYear);
             this.interestCompose(this.amountTotalImmo, this.amountRentByYear, 10);
             this.displayResults();
         },
-        notaryFees(pxImmo) {
-            switch(true) {
-                case (pxImmo <= 6500):
-                    this.amountNotaryFees = (pxImmo * (3.870/100)) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
-                    break;
-                case (pxImmo >= 6501 && pxImmo <= 17000):
-                    this.amountNotaryFees = (pxImmo * (1.596/100) + 147.81) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
-                    break;
-                case (pxImmo >= 17001 && pxImmo <= 60000):
-                    this.amountNotaryFees = (pxImmo * (1.064/100) + 238.25) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
-                    break;
-                case(pxImmo > 60000):
-                    this.amountNotaryFees = (pxImmo * (0.799/100) + 397.25) * 1.20 + 800 + 400 + (pxImmo * 0.058) + (pxImmo * 0.0010);
-                    break;
-                default:
-                    console.log('erreur dans le switch');
-            }
-        },
         rentByYear(rt) {
             this.amountRentByYear = rt * 12;
-            console.log(this.amountRentByYear);
+            //console.log(this.amountRentByYear);
         },
         totalPriceImmo(px, ntx, agx, rdwk) {
             this.amountTotalImmo = Number(px) + Number(ntx) + Number(agx) + Number(rdwk);
-            console.log(this.amountTotalImmo);
+            //console.log(this.amountTotalImmo);
         },
         profitability(pxTotal, rt) {
             let profi = (rt / pxTotal * 100);
             this.resultsToRentabilityComponent.percentageRentability = profi.toFixed(2);
-            console.log(this.resultsToRentabilityComponent.percentageRentability);
+            //console.log(this.resultsToRentabilityComponent.percentageRentability);
         },
         interestCompose(priceTotal, rt, nYear) {
             let intCompo =  priceTotal * Math.pow((1 + rt / priceTotal), nYear) - priceTotal;
             this.resultsToRentabilityComponent.amountOfRentability = intCompo.toFixed(2);
-            console.log(this.resultsToRentabilityComponent.amountOfRentability);
+            //console.log(this.resultsToRentabilityComponent.amountOfRentability);
         },
         displayResults() {
             this.showDisplayResults = true;
