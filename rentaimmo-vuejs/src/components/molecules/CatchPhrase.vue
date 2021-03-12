@@ -19,8 +19,8 @@ export default {
         text-shadow: #101011 1px 1px 1px;
         font-size: 28px;
         font-style: italic;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
 </style>

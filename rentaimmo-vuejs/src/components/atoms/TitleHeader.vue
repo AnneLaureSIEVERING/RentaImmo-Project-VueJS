@@ -15,7 +15,7 @@ export default {
         text-transform: uppercase;
         text-align: center;
         font-family: 'Fascinate', cursive;
-        font-size: 46px;
+        font-size: 38px;
         text-shadow: #101011 1px 1px 1px;
     }
 </style>

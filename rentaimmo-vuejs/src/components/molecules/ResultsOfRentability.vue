@@ -1,17 +1,17 @@
 <template>
     <section class="display_results">
         <div class="classResults">
-            <p id="prof-1" class="profitability">Mensualité évaluée à : {{ results.resultAmountMonthly }} €</p>
-            <p id="prof-2" class="profitability">Montant total des intérêts : {{ results.totalInterest }} €</p>
+            <p id="prof-1" class="profitability">Rentabilité brute :  {{ amountOfResults.percentageRentability }} %</p>
+            <p id="prof-2" class="profitability">Rentabilité sur 10 ans : {{ amountOfResults.amountOfRentability }} €</p>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    name: "DisplayResult",
-    props: {
-        results: {
+    name: "ResultsRentability",
+       props: {
+        amountOfResults: {
             type: Object,
             default: () => {}
         }

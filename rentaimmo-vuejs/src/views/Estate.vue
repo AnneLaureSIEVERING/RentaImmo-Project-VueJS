@@ -71,13 +71,13 @@ export default {
             let tauxByMonth = this.intRate / 12;
             this.monthlyPayment = (valueToAmountLoan * tauxByMonth) / (1-(1+tauxByMonth) ** durateEstate);
             this.computedResultForResultComponent.resultAmountMonthly = this.monthlyPayment.toFixed(2);
-            console.log(this.computedResultForResultComponent.resultAmountMonthly);
+            //console.log(this.computedResultForResultComponent.resultAmountMonthly);
         },
 
         totalOfInterest(valueToAmountLoan, valueToDuration) {
             let interestAmount = valueToAmountLoan * this.intRate * valueToDuration;
             this.computedResultForResultComponent.totalInterest = interestAmount.toFixed(2);
-            console.log(this.computedResultForResultComponent.totalInterest);
+            //console.log(this.computedResultForResultComponent.totalInterest);
         },
         displayResults() {
             this.showDisplayResults = true;
@@ -93,29 +93,29 @@ export default {
     .show-display-enter-active {
         transition: all 1s ease;
         top: 100%;
-        height: 25%;
+        height: 20%;
     } 
     
     .show-display-enter-to {
         transition: all 1s ease;
         top: 70%;
-        height: 25%;
+        height: 20%;
     }
 
     .show-display-leave {
         transition: all 1s ease;
         top: 70%;
-        height: 25%;
+        height: 20%;
     }
 
     .show-display-leave-to {
         transition: all 0s ease;
         top: 100%;
-        height: 25%;
+        height: 20%;
     } 
 
     .container {
-        height: 75%;
+        height: 70%;
         background-color: #D3D2D3;
         background-image: url(../assets/image-foret.jpg);
         background-attachment: fixed;

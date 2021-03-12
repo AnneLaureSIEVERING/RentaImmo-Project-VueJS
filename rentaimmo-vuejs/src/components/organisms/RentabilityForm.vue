@@ -1,47 +1,121 @@
 <template>
     <!-- Formulaire pour la simulation concernant la rentabilité immobilière -->
-    <form class="form_immo" action="#" onsubmit="return false">
+    <form class="form_immo" @submit="validateForm">
         <div class="search_zone">
             <div class="style_zone">
                 <div class="zone_input">
                     <label for="price"> Prix de l'investissement </label>
-                    <input type="number" id="price" name="immo_price" placeholder="Ajouter le prix d'achat" required>
+                    <input v-model.number="price" type="number" id="price" name="immo_price" placeholder="Ajouter le prix d'achat" v-bind:class="{'text-danger': hasErrorOnInputAmountLoan }">
                 </div>
             </div>
             <div class="style_zone">
                 <div class="zone_input">
                     <label for="notary"> Frais de notaire </label>
-                    <input type="number" id="notary" name="notary_fees" placeholder="Frais de notaire">
+                    <input v-model.number="amountNotary" type="number" id="notary" name="notary_fees" placeholder="Frais de notaire">
                 </div>
             </div>
             <div class="style_zone">
                 <div class="zone_input">
                     <label for="agency"> Frais d'agence </label>
-                    <input type="number" id="agency" name="agency_fees" placeholder="Ajouter les frais" required>
+                    <input v-model.number="amountAgency" type="number" id="agency" name="agency_fees" placeholder="Ajouter les frais" v-bind:class="{'text-danger': hasErrorOnInputAmountLoan }">
                 </div>
             </div>
             <div class="style_zone">
                 <div class="zone_input">
                     <label for="roadworks"> Montant des travaux </label>
-                    <input type="number" id="roadworks" name="immo_roadworks" placeholder="Ajouter le montant">
+                    <input v-model.number="amountRoadworks" type="number" id="roadworks" name="immo_roadworks" placeholder="Ajouter le montant">
                 </div>
             </div>
             <div class="style_zone">
                 <div class="zone_input rent_input">
                     <label for="rent"> Loyer estimé </label>
-                    <input type="number" id="rent" name="immo_rent" placeholder="Ajouter le loyer estimé">
+                    <input v-model.number="amountRent" type="number" id="rent" name="immo_rent" placeholder="Ajouter le loyer estimé" v-bind:class="{'text-danger': hasErrorOnInputAmountLoan }">
                 </div>
             </div>
-            <AtomSubmitButton/>
-            <AtomClearButton/>
+            <SubmitButton/>
+            <ClearButton @submitToCloseDisplay="closeDisplayMethod"/>
         </div>
     </form>
 </template>
 
+<script>
+import SubmitButton from '../atoms/SubmitButton'
+import ClearButton from '../atoms/ClearButton'
+
+export default {
+    name: "RentabilityForm",
+    components: {
+        SubmitButton,
+        ClearButton
+    },
+    data: function () {
+        return {
+            hasErrorOnInputAmountLoan: false,
+            hasErrorOnInputDuration: false,
+            price: '',
+            amountNotary: '',
+            amountAgency: '',
+            amountRoadworks: '',
+            amountRent: '',
+            errorList: []
+        }
+    },
+    methods: {
+        validateForm(e) {
+            e.preventDefault()
+            
+            if(this.price === '') {
+                this.errorList.push(this.errorList.length + 1);
+                this.hasErrorOnInputAmountLoan = true;
+            } else {
+                this.hasErrorOnInputAmountLoan = false;
+            }
+
+            if(this.amountAgency === '') {
+                this.errorList.push(this.errorList.length + 1);
+                this.hasErrorOnInputDuration = true;
+            } else {
+                this.hasErrorOnInputDuration = false;
+            }
+
+            if(this.amountRent === '') {
+                this.errorList.push(this.errorList.length + 1);
+                this.hasErrorOnInputDuration = true;
+            } else {
+                this.hasErrorOnInputDuration = false;
+            }
+
+            if(this.amountRoadworks === '') {
+                this.amountRoadworks = 0;
+            }
+
+            if(this.errorList.length === 0) {
+                this.$emit('submitRentabilityForm', {
+                    price: this.price,
+                    amountNotary: this.amountNotary,
+                    amountAgency: this.amountAgency,
+                    amountRoadworks: this.amountRoadworks,
+                    amountRent: this.amountRent
+                });
+            }
+        },
+        closeDisplayMethod() {
+            this.$emit('closeDisplay');
+        }
+    }
+}
+</script>
+
 <style scoped>
 
     form {
-        margin-top: 2em;
+        padding-top: 2em;
+    }
+
+    .text-danger {
+        border: 2px solid rgb(223, 93, 93);
+        border-radius: 32px;
+        padding: 5px;
     }
 
     .search_zone {

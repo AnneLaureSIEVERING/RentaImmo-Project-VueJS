@@ -104,7 +104,6 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column; 
-        height: 45vh;
     }
 
     .zone_input {
@@ -144,13 +143,14 @@
         outline-style: none;
         text-align: center;
         width: 95%;
+        font-size: 12px;
     }
 
     @media screen and (min-width: 321px) and (max-width: 767px) {
         .form_immo {
             margin: 1em auto;
-            height: 82vh;
-            width: 60vw;
+            height: 82%;
+            width: 60%;
         }
          .search_zone {
             width: 90%;  

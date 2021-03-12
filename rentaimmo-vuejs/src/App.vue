@@ -38,7 +38,7 @@ import TitleHeader from './components/atoms/TitleHeader'
 #nav a {
   font-weight: bold;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #nav a.router-link-exact-active {
@@ -48,7 +48,7 @@ import TitleHeader from './components/atoms/TitleHeader'
 .header {
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 15%;
+  height: 10%;
 }
 
 html, body {
