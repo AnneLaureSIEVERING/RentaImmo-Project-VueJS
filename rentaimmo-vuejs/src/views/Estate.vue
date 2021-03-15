@@ -115,18 +115,7 @@ export default {
     } 
 
     .container {
-        height: 70%;
-        background-color: #D3D2D3;
-        background-image: url(../assets/image-foret.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
+        height: 80%;
+        width: 100%;
     }
-
-    .styleContainerPrincipal{
-        height: 85%;
-        background-color: #172b51;
-    }
-
 </style>

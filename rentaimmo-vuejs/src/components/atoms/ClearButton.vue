@@ -24,7 +24,7 @@
         width: 30px;
         position: absolute;
         margin-top: 20px;
-        background-color: #6E52FC; 
+        background-color: #9D6340; 
         border-radius: 2px;
         transform: rotate(45deg);
         transition: all .3s ease-in;
@@ -35,7 +35,7 @@
         width: 30px;
         position: absolute;
         margin-top: 20px;
-        background-color: #52A0F8;
+        background-color: #222D3A;
         border-radius: 2px;
         transform: rotate(-45deg);
         transition: all .3s ease-in;
@@ -43,7 +43,7 @@
     
     .close{
         color: white;
-        background-color: #6E52FC;
+        background-color: #9D6340;
         font-size: .6em;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -64,13 +64,21 @@
     
     .clear-form:hover .leftright{
         transform: rotate(-45deg);
-        background-color: #6E52FC;
+        background-color: #9D6340;
     }
     .clear-form:hover .rightleft{
         transform: rotate(45deg);
-        background-color: #52A0F8;
+        background-color: #222D3A;
     }
     .clear-form:hover .close{
         opacity: 1;
     }
+
+    @media screen and (min-width: 1200px)  {
+         .clear-form {
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+    }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="styleContainerPrincipal">
+    <div class="containerPrincipal">
         <section class="container">
             <RentabilityForm
                 @submitRentabilityForm="methodsCalculsRentability"
@@ -80,40 +80,34 @@ export default {
     .show-display-enter-active {
         transition: all 1s ease;
         top: 100%;
-        height: 20%;
+        height: 30%;
     } 
     
     .show-display-enter-to {
         transition: all 1s ease;
         top: 70%;
-        height: 20%;
+        height: 30%;
     }
 
     .show-display-leave {
         transition: all 1s ease;
         top: 70%;
-        height: 20%;
+        height: 30%;
     }
 
     .show-display-leave-to {
         transition: all 0s ease;
         top: 100%;
-        height: 20%;
+        height: 30%;
     } 
 
-    .container {
-        height: 70%;
-        background-color: #D3D2D3;
-        background-image: url(../assets/image-foret.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-    }
-
-    .styleContainerPrincipal{
-        height: 85%;
-        background-color: #172b51;
+    @media screen and (min-width: 768px) {
+        .containerPrincipal{
+            padding-top: 10px;
+        }
+        .container {
+            height: 60%;
+        }
     }
 
 </style>

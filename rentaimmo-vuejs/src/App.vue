@@ -25,14 +25,13 @@ import TitleHeader from './components/atoms/TitleHeader'
 #app {
   font-family: 'Source Serif Pro', serif;
   text-align: center;
-  background-color: #172b51; 
-  color: aliceblue;
-  box-sizing: border-box;
   height: 100%;
+  width: 100%;
+  background: rgba(255, 253, 253, 0.5);
 }
 
 #nav {
-  padding: 20px;
+  margin: 20px;
 }
 
 #nav a {
@@ -42,18 +41,34 @@ import TitleHeader from './components/atoms/TitleHeader'
 }
 
 #nav a.router-link-exact-active {
-  color: rgb(128, 120, 120);
+  color: #222D3A;
 }
 
 .header {
   padding-top: 10px;
-  padding-bottom: 10px;
-  height: 10%;
-}
-
-html, body {
-  height: 100%;
+  margin-bottom: 10px;
   width: 100%;
 }
 
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222D3A;
+  background-image: url(assets/image-foret.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    height: 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 20%;
+  }
+}
 </style>

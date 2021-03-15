@@ -22,18 +22,24 @@ export default {
 <style scoped>
     .display_results {
         width: 100%;
-        background: #a5a3a3;
-        height: 30%;
+        background: #EAE3DF;
         display: flex;
         justify-content: center;
+        height: 30%;
     }
 
     .profitability {
-        color: #172b51;
+        color: #222D3A;
         text-align: center;
-        border-bottom: 1px solid #637591;
+        border-bottom: 1px solid #9D6340;
+        border-top: 1px solid #9D6340;
         flex-direction: column;
-    } 
+    }
+
+    .classResults {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 
     /** MEDIA QUERIES **/
     @media screen and (min-width: 321px) and (max-width: 991px) {
@@ -45,12 +51,24 @@ export default {
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
         
         .profitability {
-            font-size: 20px;
+            font-size: 18px;
             padding-top: 28px;
             padding-bottom: 15px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .profitability {
+            font-size: 18px;
+            padding-top: 28px;
+            padding-bottom: 15px;
+        }
+
+        .display_results {
+            margin-top: 14em;
         }
     }
 

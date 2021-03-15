@@ -80,7 +80,7 @@
 <style scoped>
 
     #amountImmo::placeholder {
-        color: white;
+        color: rgb(34, 34, 34);
         font-size: 12px;
     }
 
@@ -96,14 +96,14 @@
     }
 
     .search_zone {
-        border: 1px solid #172B51;
+        border: 1px solid rgb(221, 221, 221);
         border-radius: 32px;
         align-items: center;
-        box-shadow: rgba(241, 234, 234, 0.747) 0px 3px 8px;
-        background-color: #172B51;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px;
         margin: 0 auto;
         display: flex;
         flex-direction: column; 
+        background-color: rgb(247, 247, 247);
     }
 
     .zone_input {
@@ -115,7 +115,7 @@
     }
 
     label {
-        color: #FFFFFF;
+        color: rgb(34, 34, 34);
         cursor: pointer;
         display: block;
         border: 1px solid transparent;
@@ -130,7 +130,7 @@
     input {
         background: none;
         font-weight: 600;
-        color: #FFFFFF;
+        color: rgb(34, 34, 34);
         outline-style: none;
         text-align: center;
         width: 95%;
@@ -139,7 +139,7 @@
     select {
         background: none;
         font-weight: 600;
-        color: #FFFFFF;
+        color: rgb(34, 34, 34);
         outline-style: none;
         text-align: center;
         width: 95%;
@@ -181,7 +181,7 @@
             margin-top: 50px;
         }
         .search_zone {
-            width: 60%;
+            width: 40%;
         }
         input {
             border: 0px;

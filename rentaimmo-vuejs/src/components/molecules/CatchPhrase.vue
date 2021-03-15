@@ -12,11 +12,11 @@ export default {
 
 <style scoped>
     .catchphrase {
-        color: #FFFFFF;
+        color: #9D6340;
         display: inline-block;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.03em;
         font-weight: 600;
-        text-shadow: #101011 1px 1px 1px;
+        text-shadow: #3f3f49 1px 1px 1px;
         font-size: 28px;
         font-style: italic;
         padding-top: 0.5em;
