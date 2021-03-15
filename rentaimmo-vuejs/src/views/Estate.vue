@@ -1,5 +1,5 @@
 <template>
-    <div class="styleContainerPrincipal">
+    <div class="containerPrincipal">
         <section class="container">
             <EstateForm
                 @submitForm="methodsCalculs"
@@ -116,6 +116,11 @@ export default {
 
     .container {
         height: 80%;
-        width: 100%;
+    }
+
+    .containerPrincipal {
+        background-color:#EAE3DF;
+        width: 80%;
+        margin: 0 auto;
     }
 </style>

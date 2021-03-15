@@ -34,6 +34,7 @@ export default {
         border-bottom: 1px solid #9D6340;
         border-top: 1px solid #9D6340;
         flex-direction: column;
+        font-size: 18px;
     }
 
     .classResults {
@@ -45,7 +46,6 @@ export default {
     @media screen and (min-width: 321px) and (max-width: 991px) {
 
         .profitability {
-            font-size: 14px;
             padding-top: 15px;
             padding-bottom: 15px;
         }
@@ -54,7 +54,6 @@ export default {
     @media screen and (min-width: 992px) and (max-width: 1199px) {
         
         .profitability {
-            font-size: 18px;
             padding-top: 28px;
             padding-bottom: 15px;
         }
@@ -62,13 +61,12 @@ export default {
 
     @media screen and (min-width: 1200px) {
         .profitability {
-            font-size: 18px;
             padding-top: 28px;
             padding-bottom: 15px;
         }
 
         .display_results {
-            margin-top: 14em;
+            margin-top: 3em;
         }
     }
 

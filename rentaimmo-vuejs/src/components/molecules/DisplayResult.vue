@@ -52,7 +52,7 @@ export default {
         }
 
         .display_results {
-            margin-top: 8em;
+            margin-top: 4em;
         }
     }
 
@@ -65,7 +65,7 @@ export default {
         }
 
         .display_results {
-            margin-top: 7em;
+            margin-top: 4em;
         }
     }
 
@@ -74,6 +74,10 @@ export default {
             font-size: 20px;
             padding-top: 28px;
             padding-bottom: 15px;
+        }
+
+        .display_results {
+            margin-top: 1em;
         }
     }
 

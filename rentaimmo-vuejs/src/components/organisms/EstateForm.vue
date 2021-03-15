@@ -1,4 +1,5 @@
 <template>
+    <!-- Formulaire pour la simulation concernant le prêt immobilier -->
     <form class="estate-loan" @submit="validateForm">
         <div class="search_zone">
             <div class="style_zone">

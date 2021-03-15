@@ -5,7 +5,6 @@
                 @submitRentabilityForm="methodsCalculsRentability"
                 @closeDisplay="closeDisplay"
             />
-
             <CatchPhrase/>
         </section>
 
@@ -101,6 +100,12 @@ export default {
         height: 30%;
     } 
 
+    .containerPrincipal {
+        background-color:#EAE3DF;
+        width: 80%;
+        margin: 0 auto;
+    }
+
     @media screen and (min-width: 768px) {
         .containerPrincipal{
             padding-top: 10px;
@@ -109,5 +114,4 @@ export default {
             height: 60%;
         }
     }
-
 </style>

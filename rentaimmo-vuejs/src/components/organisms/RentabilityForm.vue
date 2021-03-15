@@ -177,6 +177,7 @@ export default {
             margin: 1em auto;
             height: 82%;
             width: 60%;
+            padding-top: 10px;
         }
         .search_zone {
             margin: 0 auto;
@@ -208,12 +209,11 @@ export default {
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         .form_immo {
-            margin: 1em auto;
+            margin: auto;
             height: 82%;
             width: 60%;
         }
         .search_zone {
-            width: 40%;
             margin: 0 auto;
             display: flex;
             flex-direction: column;   
@@ -244,11 +244,12 @@ export default {
 
     @media screen and (min-width: 1200px)  {
         .form_immo {
-            padding-top: 50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         .search_zone {
             height: 75px;
-            width: 70%;
+            width: 90%;
             margin: 0 auto;
             display: flex;
         }
