@@ -18,21 +18,22 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  padding-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
-    height: 10%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .header {
-    height: 13%;
+  /** MEDIA QUERIES **/
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .header {
+      height: 10%;
+    }
   }
+
+  @media screen and (min-width: 1200px) {
+    .header {
+      height: 13%;
+    }
 }
 </style>

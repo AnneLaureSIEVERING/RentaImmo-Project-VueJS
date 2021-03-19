@@ -1,5 +1,5 @@
+<!-- Form for the simulation concerning the rentability -->
 <template>
-    <!-- Formulaire pour la simulation concernant la rentabilité immobilière -->
     <form class="form_immo" @submit="validateForm">
         <div class="search_zone">
             <div class="style_zone">
@@ -131,7 +131,6 @@ export default {
 </script>
 
 <style scoped>
-
     form {
         margin-top: 2em;
         margin-bottom:2em;
@@ -172,6 +171,7 @@ export default {
         text-align: center;
     }
 
+     /** MEDIA QUERIES **/
     @media screen and (min-width: 321px) and (max-width: 767px) {
         .form_immo {
             margin: 1em auto;

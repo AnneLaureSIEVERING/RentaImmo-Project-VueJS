@@ -18,7 +18,6 @@
 </script>
 
 <style scoped>
-    
     .leftright{
         height: 4px;
         width: 30px;
@@ -74,6 +73,7 @@
         opacity: 1;
     }
 
+    /** MEDIA QUERIES **/
     @media screen and (min-width: 1200px)  {
          .clear-form {
             padding-top: 10px;

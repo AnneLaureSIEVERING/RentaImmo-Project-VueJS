@@ -21,6 +21,7 @@ export default {
         padding-top: 0.5em;
     }
 
+     /** MEDIA QUERIES **/
      @media screen and (min-width: 321px) and (max-width: 991px) {
 
         .catchphrase {

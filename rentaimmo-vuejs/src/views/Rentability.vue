@@ -1,3 +1,4 @@
+<!-- Page dedicated to calculating the profitability of a real estate purchase  -->
 <template>
     <div class="containerPrincipal">
         <section class="container">
@@ -49,21 +50,17 @@ export default {
         },
         rentByYear(rt) {
             this.amountRentByYear = rt * 12;
-            //console.log(this.amountRentByYear);
         },
         totalPriceImmo(px, ntx, agx, rdwk) {
             this.amountTotalImmo = Number(px) + Number(ntx) + Number(agx) + Number(rdwk);
-            //console.log(this.amountTotalImmo);
         },
         profitability(pxTotal, rt) {
             let profi = (rt / pxTotal * 100);
             this.resultsToRentabilityComponent.percentageRentability = profi.toFixed(2);
-            //console.log(this.resultsToRentabilityComponent.percentageRentability);
         },
         interestCompose(priceTotal, rt, nYear) {
             let intCompo =  priceTotal * Math.pow((1 + rt / priceTotal), nYear) - priceTotal;
             this.resultsToRentabilityComponent.amountOfRentability = intCompo.toFixed(2);
-            //console.log(this.resultsToRentabilityComponent.amountOfRentability);
         },
         displayResults() {
             this.showDisplayResults = true;

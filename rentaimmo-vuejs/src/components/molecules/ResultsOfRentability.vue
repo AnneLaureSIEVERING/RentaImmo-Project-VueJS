@@ -1,3 +1,4 @@
+<!-- Display results of rentability -->
 <template>
     <section class="display_results">
         <div class="classResults">
