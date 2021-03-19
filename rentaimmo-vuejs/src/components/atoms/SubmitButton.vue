@@ -47,6 +47,7 @@
         margin: auto;
     }
 
+    /** MEDIA QUERIES **/
     @media screen and (min-width: 1200px)  {
          .button {
             margin-bottom:15px;

@@ -1,5 +1,5 @@
+<!-- Form for the simulation concerning the estate loan -->
 <template>
-    <!-- Formulaire pour la simulation concernant le prêt immobilier -->
     <form class="estate-loan" @submit="validateForm">
         <div class="search_zone">
             <div class="style_zone">
@@ -147,6 +147,7 @@
         font-size: 12px;
     }
 
+     /** MEDIA QUERIES **/
     @media screen and (min-width: 321px) and (max-width: 767px) {
         .form_immo {
             margin: 1em auto;

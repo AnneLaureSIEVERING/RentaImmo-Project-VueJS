@@ -1,3 +1,4 @@
+<!-- application home page -->
 <template>
     <section class="home">
             <p class="home-title"> Bienvenue sur Renta-Immo ! </p>

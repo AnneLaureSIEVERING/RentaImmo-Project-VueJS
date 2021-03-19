@@ -1,3 +1,4 @@
+<!-- Page dedicated to calculating a estate loan simulation -->
 <template>
     <div class="containerPrincipal">
         <section class="container">
@@ -46,7 +47,6 @@ export default {
             this.displayResults();
         },
         interestRate(valueToDuration) {
-            // console.log(valuesToCompute.duration)
             switch(valueToDuration) {
                 case 10:
                     this.intRate = 0.0075;
@@ -71,13 +71,11 @@ export default {
             let tauxByMonth = this.intRate / 12;
             this.monthlyPayment = (valueToAmountLoan * tauxByMonth) / (1-(1+tauxByMonth) ** durateEstate);
             this.computedResultForResultComponent.resultAmountMonthly = this.monthlyPayment.toFixed(2);
-            //console.log(this.computedResultForResultComponent.resultAmountMonthly);
         },
 
         totalOfInterest(valueToAmountLoan, valueToDuration) {
             let interestAmount = valueToAmountLoan * this.intRate * valueToDuration;
             this.computedResultForResultComponent.totalInterest = interestAmount.toFixed(2);
-            //console.log(this.computedResultForResultComponent.totalInterest);
         },
         displayResults() {
             this.showDisplayResults = true;
